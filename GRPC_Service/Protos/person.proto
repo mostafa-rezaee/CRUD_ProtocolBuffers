@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+option csharp_namespace = "GRPC_Service.Protos";
+
+service PersonService {
+	rpc GetPersonsList (Empty) returns (Persons);
+	rpc GetPerson (GetPersonRequest) returns (PersonModel);
+	rpc CreatePerson (CreatePersonRequest) returns (PersonModel);
+	rpc UpdatePerson (UpdatePersonRequest) returns (PersonModel);
+	rpc DeletePerson (DeletePersonRequest) returns (DeletePersonResponse);
+}
+
+message Empty {
+
+}
+
+message Persons {
+	repeated PersonModel items = 1;
+}
+
+message GetPersonRequest {
+	int32 personId = 1;
+}
+
+message PersonModel{
+	int32 id = 1;
+	string firstName = 2;
+	string lastName = 3;
+	string nationalCode = 4;
+	Date birthDate = 5;
+}
+
+message CreatePersonRequest {
+	PersonModel person = 1;
+}
+
+message UpdatePersonRequest {
+	PersonModel person = 1;
+}
+
+message DeletePersonRequest {
+	int32 personId = 1;
+}
+
+message DeletePersonResponse {
+	bool isDelete = 1;
+}
+
+message Date {
+	int32 year = 1;
+	int32 month = 2;
+	int32 day = 3;
+}
