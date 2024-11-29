@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GRPC_Service", "GRPC_Service\GRPC_Service.csproj", "{11E1C8D1-025A-4053-BF9E-4ABFCDEABFC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GRPC_Service", "GRPC_Service\GRPC_Service.csproj", "{11E1C8D1-025A-4053-BF9E-4ABFCDEABFC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{0B843774-C266-4326-BE9F-6D76EEDC960D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{0B843774-C266-4326-BE9F-6D76EEDC960D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationDemo", "WebApplicationDemo\WebApplicationDemo.csproj", "{2A19EBD4-31D5-4E6C-8BA8-CA4DCCE077F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0B843774-C266-4326-BE9F-6D76EEDC960D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B843774-C266-4326-BE9F-6D76EEDC960D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B843774-C266-4326-BE9F-6D76EEDC960D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A19EBD4-31D5-4E6C-8BA8-CA4DCCE077F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A19EBD4-31D5-4E6C-8BA8-CA4DCCE077F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A19EBD4-31D5-4E6C-8BA8-CA4DCCE077F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A19EBD4-31D5-4E6C-8BA8-CA4DCCE077F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

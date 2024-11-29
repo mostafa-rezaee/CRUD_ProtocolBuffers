@@ -37,7 +37,7 @@ namespace WebAPI.Controllers
             return null;
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public async Task<PersonModel?> GetPersonById(int id)
         {
             try
@@ -110,7 +110,7 @@ namespace WebAPI.Controllers
             return null;
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<DeletePersonResponse?> DeletePerson(int id)
         {
             try

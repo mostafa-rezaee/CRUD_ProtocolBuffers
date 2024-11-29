@@ -1,0 +1,51 @@
+﻿@page
+@using WebApplicationDemo.Helpers
+@model WebApplicationDemo.Pages.Persons.IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h2>Persons</h2>
+<p>
+    <a asp-page="Create">Create New Person</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Nationalcode</th>
+            <th>Birthdate</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Persons.Items.ToList())
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(MItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(MItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(MItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(MItem => item.NationalCode)
+                </td>
+                <td>
+                    @item.BirthDate.ToPersianDateString()
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
